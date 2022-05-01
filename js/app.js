@@ -5,10 +5,9 @@ const navbarList = document.getElementById('navbar__list')
 const navbar = document.getElementsByClassName('navbar__menu')[0]
 const sections = document.getElementsByTagName('section')
 
-// A function to build the inside of the navbar
 let buildNavbar =()=> {
 
-    // Go over the all the sections in an object and add li elements to them
+    // Iterate over the all the sections in an object and add li elements to them
     for ( let section of sections ) {
         let li = document.createElement('li')
         
@@ -31,8 +30,8 @@ document.onscroll = (event)=> {
     }
 }
 
-// Function for checking if a section is in view
 let checkIfSectionInView =( section )=> {
+
     // Create variables for the section's position and the device height
     let position = section.getBoundingClientRect()
     let viewHeight = document.documentElement.clientHeight
