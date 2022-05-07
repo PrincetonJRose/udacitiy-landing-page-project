@@ -24,7 +24,7 @@ Here is a sample TOC(*wow! such cool!*) that is actually the TOC for this README
 [(Back to top)](#table-of-contents)
 
 <!-- This is optional and it is used to give the user info on how to use the project after installation. This could be added in the Installation section also. -->
-To use the this project, open the index.html file in the root folder in your browser of choice. Then scroll through the page or use the navbar to navigate to different sections.
+To use the this project, open the index.html file in the project's root folder in your browser of choice. Then scroll through the page or use the navbar to navigate to different sections.
 
 # Development
 [(Back to top)](#table-of-contents)
