@@ -7,7 +7,7 @@ const sections = document.getElementsByTagName('section')
 
 let buildNavbar =()=> {
 
-    // Iterate over the all the sections in an object and add li elements to them
+    // Iterate over the all the sections in an object and add li elements to the navbar for each one
     for ( let section of sections ) {
         let li = document.createElement('li')
         
@@ -49,7 +49,6 @@ let checkIfSectionInView =( section )=> {
 
 // Create an event for the navbar so when its clicked it scrolls the appropriate section into view using event delegation
 navbarList.onclick = (event)=> {
-    // Make a variable to hold what the element was for ease of use
     let element = event.target
 
     // Check to see if the element in question was a menu button on the navbar
