@@ -1,4 +1,3 @@
-// console.log('This page was loaded! Yay~ 😄')
 
 // Grabbing main parts of the HTML as variables for future use
 const navbarList = document.getElementById('navbar__list')
@@ -36,15 +35,23 @@ let checkIfSectionInView =( section )=> {
     let position = section.getBoundingClientRect()
     let viewHeight = document.documentElement.clientHeight
     
+    // Get the span and its li from the navbar for this section
+    let span = document.querySelector(`[data-id=${section.id}]`)
+    let li = span.parentElement
+
     // Check to see if the sections relative position is near the top of the device screen
     if ( position.top <= viewHeight && position.top <= 500 && position.top >= 0 ) {
         // Check to see if the current section is already the section in view, if it is don't add the active class to it's list again
-        if ( !section.className.includes('active') )
+        if ( !section.className.includes('active') ) {
             section.classList += ' active'
+            li.classList += ' active'
+        }
     }
     // Otherwise, remove the active class from any sections that aren't supposed to have it
-    else if ( section.className.includes('active') )
+    else if ( section.className.includes('active') ) {
         section.classList.remove('active')
+        li.classList.remove('active')
+    }
 }
 
 // Create an event for the navbar so when its clicked it scrolls the appropriate section into view using event delegation
